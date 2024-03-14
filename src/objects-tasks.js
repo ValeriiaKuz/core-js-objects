@@ -141,8 +141,8 @@ function makeWord(lettersObject) {
   });
 
   const result = Array(totalLetters);
-  Object.entries(lettersObject).forEach(function ([letter, positions]) {
-    positions.forEach(function (position) {
+  Object.entries(lettersObject).forEach(([letter, positions]) => {
+    positions.forEach((position) => {
       result[position] = letter;
     });
   });
@@ -212,7 +212,7 @@ function sellTickets(queue) {
 function Rectangle(width, height) {
   this.width = width;
   this.height = height;
-  Rectangle.prototype.getArea = function () {
+  Rectangle.prototype.getArea = () => {
     return this.width * this.height;
   };
 }
